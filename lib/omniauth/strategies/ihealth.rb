@@ -60,7 +60,7 @@ module OmniAuth
       def raw_info
         access_token.options[:mode] = :query
         user_profile_params = {:client_id => client.id, :client_secret => client.secret, :access_token => access_token.token}
-        user_profile_params.merge({:sc => options.sc, :sv => options.sv}) if options.sc && options.sv
+        user_profile_params.merge!({:sc => options.sc, :sv => options.sv}) if options.sc && options.sv
         @raw_info ||= access_token.get("/openapiv2/user/#{access_token[:user_id]}.json/?#{user_profile_params.to_param}", parse: :json).parsed
       end
 

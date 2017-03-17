@@ -2,11 +2,11 @@
 require File.expand_path('../lib/omniauth-ihealth/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Hunter Spinks", "Artur Karbone", "Victor Vargas"]
-  gem.email         = ["hspinks@gmail.com"]
+  gem.authors       = ["Hunter Spinks", "Artur Karbone", "Victor Vargas", "Eric Shelley"]
+  gem.email         = ["erc@webdesignbakery.com"]
   gem.description   = %q{OmniAuth strategy for iHealth.com.}
   gem.summary       = %q{OmniAuth strategy for iHealth.com.}
-  gem.homepage      = "https://github.com/hspinks/omniauth-ihealth"
+  gem.homepage      = "https://github.com/bartimaeus/omniauth-ihealth"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")

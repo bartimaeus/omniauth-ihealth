@@ -1,5 +1,4 @@
 require 'omniauth-oauth2'
-# require 'oauth2'
 
 module OmniAuth
   module Strategies

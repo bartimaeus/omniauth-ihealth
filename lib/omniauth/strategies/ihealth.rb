@@ -3,12 +3,10 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class IHealth < OmniAuth::Strategies::OAuth2
-
-      AVAILABLE_API_NAMES = "OpenApiActivity OpenApiBG OpenApiBP OpenApiSleep OpenApiSpO2 OpenApiUserInfo OpenApiWeight"
-      DEFAULT_API_NAMES = "OpenApiUserInfo"
+      # AVAILABLE_API_NAMES = "OpenApiActivity OpenApiBG OpenApiBP OpenApiSleep OpenApiSpO2 OpenApiSport OpenApiUserInfo OpenApiWeight"
+      DEFAULT_SCOPE = 'OpenApiUserInfo'
 
       option :name, 'ihealth'
-      option :scope, DEFAULT_API_NAMES
       option :provider_ignores_state, true
 
       option :client_options, {
@@ -22,7 +20,8 @@ module OmniAuth
       def authorize_params
         super.tap do |params|
           params[:response_type] = 'code'
-          params[:APIName] = options.scope
+          params[:APIName] = get_scope(params)
+          params[:scope] = get_scope(params)
         end
       end
 
@@ -77,6 +76,7 @@ module OmniAuth
       end
 
       protected
+
       CM_TO_IN_CONVERSION = 0.393701
       FT_TO_IN_CONVERSION = 12
       def calc_height(value, unit)
@@ -103,6 +103,12 @@ module OmniAuth
         else    # unrecognized unit
           return value
         end
+      end
+
+      private
+
+      def get_scope(params)
+        params[:scope] || DEFAULT_SCOPE
       end
 
     end

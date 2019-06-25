@@ -5,7 +5,7 @@ require 'omniauth-ihealth-oauth2/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "omniauth-ihealth-oauth2"
-  gem.version       = OmniAuth::IHealth::VERSION
+  gem.version       = OmniAuth::IHealthOauth2::VERSION
   gem.authors       = ["Hunter Spinks", "Artur Karbone", "Victor Vargas", "Eric Shelley"]
   gem.email         = ["eirc@webdesignbakery.com"]
   gem.description   = %q{OmniAuth strategy for iHealth.}

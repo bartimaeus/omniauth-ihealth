@@ -1,5 +1,7 @@
 # OmniAuth iHealth OAuth2 Strategy
 
+[![Build Status](https://travis-ci.org/bartimaeus/omniauth-ihealth-oauth2.svg?branch=master)](https://travis-ci.org/bartimaeus/omniauth-ihealth-oauth2)
+
 A iHealth OAuth2 strategy for OmniAuth.
 
 For more details, read the iHealth documentation: https://developer.ihealthlabs.com

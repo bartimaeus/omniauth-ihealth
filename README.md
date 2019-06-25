@@ -35,8 +35,9 @@ You can now access the OmniAuth iHealth OAuth2 URL: `/auth/ihealth`.
 ## Granting Member Permissions to Your Application
 
 With the iHealth API, you have the ability to specify which permissions you want users to grant your application.
-For more details, read the iHealth documentation: https://developer.ihealthlabs.com. All available scopes:
-`OpenApiActivity OpenApiBG OpenApiBP OpenApiSleep OpenApiSpO2 OpenApiSport OpenApiUserInfo OpenApiWeight`
+For more details, read the iHealth documentation: https://developer.ihealthlabs.com.
+
+Available scopes: `OpenApiActivity OpenApiBG OpenApiBP OpenApiSleep OpenApiSpO2 OpenApiSport OpenApiUserInfo OpenApiWeight`
 
 You can configure the scope option:
 

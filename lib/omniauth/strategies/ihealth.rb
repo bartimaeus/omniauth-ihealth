@@ -66,7 +66,7 @@ module OmniAuth
         info = raw_info
         user_data ||= {
           :name => info["nickname"],
-          :gender => info["gender"]&.downcase,
+          :gender => info["gender"].try(:downcase),
           :birthday => Time.at(info["dateofbirth"]).to_date.strftime("%Y-%m-%d"),
           :image => URI.unescape(info["logo"]),
           :nickname => info["nickname"],

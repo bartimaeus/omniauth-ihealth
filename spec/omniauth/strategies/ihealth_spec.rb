@@ -1,6 +1,5 @@
 require 'spec_helper'
 require 'omniauth-ihealth-oauth2'
-require 'pry'
 
 describe OmniAuth::Strategies::IHealth do
   let(:request) { double('Request', params: {}, cookies: {}, env: {}) }

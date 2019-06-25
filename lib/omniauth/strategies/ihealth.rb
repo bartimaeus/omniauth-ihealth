@@ -115,4 +115,4 @@ module OmniAuth
   end
 end
 
-OmniAuth.config.add_camelization 'ihealth', 'iHealth'
+OmniAuth.config.add_camelization 'ihealth', 'IHealth'

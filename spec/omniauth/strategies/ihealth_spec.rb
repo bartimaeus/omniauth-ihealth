@@ -26,7 +26,7 @@ describe OmniAuth::Strategies::IHealth do
   end
 
   it 'adds camelization for itself' do
-    expect(OmniAuth::Utils.camelize('ihealth')).to eq('iHealth')
+    expect(OmniAuth::Utils.camelize('ihealth')).to eq('IHealth')
   end
 
   describe '#client' do

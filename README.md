@@ -11,15 +11,11 @@ For more details, read the iHealth documentation: https://developer.ihealthlabs.
 
 Add this line to your application's Gemfile:
 
-    gem 'omniauth-ihealth-oauth2'
+    gem 'omniauth-ihealth-oauth2', git: 'https://github.com/sauhardad/omniauth-ihealth-oauth2'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install omniauth-ihealth-oauth2
 
 ## Usage
 
@@ -34,6 +30,8 @@ end
 ```
 
 You can now access the OmniAuth iHealth OAuth2 URL: `/auth/ihealth`.
+
+## To use with Devise follow the instructions in this [link](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview).
 
 ## Granting Member Permissions to Your Application
 

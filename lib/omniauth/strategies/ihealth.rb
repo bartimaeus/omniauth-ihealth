@@ -67,7 +67,7 @@ module OmniAuth
         user_data ||= {
           :name => info["nickname"],
           :gender => info["gender"].try(:downcase),
-          :birthday => Time.at(info["dateofbirth"]).to_date.strftime("%Y-%m-%d"),
+          :birthday => Time.at(info["dateofbirth"].to_i).to_date.strftime("%Y-%m-%d"),
           :image => URI.unescape(info["logo"]),
           :nickname => info["nickname"],
           :height => calc_height(info["height"], info["HeightUnit"]),
